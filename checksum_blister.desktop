@@ -1,0 +1,63 @@
+[Desktop Entry]
+Icon=dialog-ok
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=showmd5;showsha1;showsha256;createmd5;createsha1;createsha256;checkmd5;checksha1;checksha256
+X-KDE-Submenu=Checksum Blister
+X-KDE-Submenu[ru_RU]=Контрольные суммы
+
+
+[Desktop Action showmd5]
+Exec=dir=$(dirname %F); file=$(basename %F);notify-send -t 0 -i "documentinfo" "MD5 Checksum" "`cd ${dir} && md5sum ${file} 2>&1`"
+Icon=documentinfo
+Name=Show md5 Checksum
+Name[ru_RU]=Показать md5 Checksum
+
+[Desktop Action createmd5]
+Exec=dir=$(dirname %F); file=$(basename %F); cd ${dir} && md5sum ${file} > %F.md5
+Icon=document-new
+Name=Create file with md5 Checksum
+Name[ru_RU]=Создать файл с md5 Checksum
+
+[Desktop Action checkmd5]
+Exec=dir=$(dirname %F); file=$(basename %F);notify-send -t 0 -i "dialog-ok" "MD5 Checksum" "`cd ${dir} && md5sum -c ${file}.md5 2>&1`"
+Icon=dialog-ok
+Name=Check md5 Checksum
+Name[ru_RU]=Проверить md5 Checksum
+
+[Desktop Action showsha1]
+Exec=dir=$(dirname %F); file=$(basename %F);notify-send -t 0 -i "documentinfo" "SHA1 Checksum" "`cd ${dir} && sha1sum ${file} 2>&1`"
+Icon=documentinfo
+Name=Show sha1 Checksum
+Name[ru_RU]=Показать sha1 Checksum
+
+[Desktop Action createsha1]
+Exec=dir=$(dirname %F); file=$(basename %F); cd ${dir} && sha1sum ${file} > %F.sha1
+Icon=document-new
+Name=Create file with sha1 Checksum
+Name[ru_RU]=Создать файл с sha1 Checksum
+
+[Desktop Action checksha1]
+Exec=dir=$(dirname %F); file=$(basename %F);notify-send -t 0 -i "dialog-ok" "SHA1 Checksum" "`cd ${dir} && sha1sum -c ${file}.sha1 2>&1`"
+Icon=dialog-ok
+Name=Check sha1 Checksum
+Name[ru_RU]=Проверить sha1 Checksum
+
+[Desktop Action showsha256]
+Exec=dir=$(dirname %F); file=$(basename %F);notify-send -t 0 -i "documentinfo" "SHA256 Checksum" "`cd ${dir} && sha256sum ${file} 2>&1`"
+Icon=documentinfo
+Name=Show sha256 Checksum
+Name[ru_RU]=Показать sha256 Checksum
+
+[Desktop Action createsha256]
+Exec=dir=$(dirname %F); file=$(basename %F); cd ${dir} && sha256sum ${file} > %F.sha256
+Icon=document-new
+Name=Create file with sha256 Checksum
+Name[ru_RU]=Создать файл с sha256 Checksum
+
+[Desktop Action checksha256]
+Exec=dir=$(dirname %F); file=$(basename %F);notify-send -t 0 -i "dialog-ok" "SHA256 Checksum" "`cd ${dir} && sha256sum -wc ${file}.sha256 2>&1`"
+Icon=dialog-ok
+Name=Check sha256 Checksum
+Name[ru_RU]=Проверить sha256 Checksum

@@ -1,7 +1,7 @@
 # Checksum-Blister
 KDE Dolphin Service Menus
 
-The Service Menu to **show**, **create file** and **check** the **sha256**, **sha1** and **md5** checksums via right-clicking on any file.
+The Service Menu to **show**, **create file** and **check** the **sha512**, **sha256**, **sha1** and **md5** checksums via right-clicking on any file.
 
 ## Installation
 Copy the file ```checksum_blister.desktop``` to ```~/.local/share/kservices5/ServiceMenus/```

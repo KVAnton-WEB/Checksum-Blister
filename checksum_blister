@@ -1,0 +1,58 @@
+#!/bin/bash
+
+function checksum {
+	result=$(cd ${dirCurrent} && ${1} ${fileCurrent} 2>&1)
+	printf $result | xsel -b -i
+	case "$cmd" in
+		"show")
+			notify-send -t 0 -i "documentinfo" "${2}" "${result}\n"
+		;;
+		"create" )
+			echo "${dirCurrent}/${fileCurrent}.${1}"
+			echo ${result} > "${dirCurrent}/${fileCurrent}.${1}"
+		;;
+		"check" )
+			notify-send -t 0 -i "dialog-ok" "${2}" "`cd "${dirCurrent}" && "${1}" -wc "${fileCurrent}.${1}" 2>&1`"
+		;;
+	esac
+}
+
+while [ -n "$1" ]
+do
+	case "$1" in
+		-f) fileDir="$2"
+			shift
+		;;
+		-a) alg="$2"
+			shift
+		;;
+		-c) cmd="$2"
+		;;
+	esac
+	shift
+done
+n=0;
+fileDir=$(sed -e 's/\ \//,\//g' <<< "$fileDir")
+IFS=$(echo -en ",");
+
+for file in $fileDir
+do
+	if [ -f ${file} ]; then
+		dirCurrent=$(dirname ${file});
+		fileCurrent=$(basename ${file});
+		case "$alg" in
+			"sha256")
+				checksum "sha256sum" "SHA256 Checksum"
+			;;
+			"sha512")
+				checksum "sha512sum" "SHA512 Checksum"
+			;;
+			"md5")
+				checksum "md5sum" "MD5 Checksum"
+			;;
+			"sha1")
+				checksum "sha1sum" "SHA1 Checksum"
+			;;
+		esac
+	fi
+done

@@ -4,6 +4,7 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=all/all;
 Actions=showmd5;showsha1;showsha256;showsha512;createmd5;createsha1;createsha256;createsha512;checkmd5;checksha1;checksha256;checksha512
+X-KDE-Priority=TopLevel
 X-KDE-Submenu=Checksum Blister
 X-KDE-Submenu[ru_RU]=Контрольные суммы
 

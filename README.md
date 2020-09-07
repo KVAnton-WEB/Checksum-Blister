@@ -12,6 +12,7 @@ Now you can also perform all these actions with multiple files at the same time.
 Copy the file ```checksum_blister.desktop``` to ```~/.local/share/kservices5/ServiceMenus/``` and ```checksum_blister```(bash) to ```/usr/local/bin/```:
 
 ```
+mkdir ~/.local/share/kservices5/ServiceMenus/
 cp ./checksum_blister.desktop ~/.local/share/kservices5/ServiceMenus/
 sudo cp ./checksum_blister /usr/local/bin/
 ```
@@ -24,8 +25,7 @@ sudo cp ./checksum_blister /usr/local/bin/
 
 #### Install dependencies in Debian/Ubuntu:
 ```
-sudo apt install libnotify-bin
-sudo apt install xsel
+sudo apt install libnotify-bin xsel
 ```
 
 ## Translations

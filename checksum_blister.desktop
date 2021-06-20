@@ -6,6 +6,7 @@ MimeType=all/all;
 Actions=showmd5;showsha1;showsha256;showsha512;createmd5;createsha1;createsha256;createsha512;checkmd5;checksha1;checksha256;checksha512
 X-KDE-Priority=TopLevel
 X-KDE-Submenu=Checksum Blister
+X-KDE-Submenu[nl]=Controlesomacties
 X-KDE-Submenu[ru_RU]=Контрольные суммы
 
 
@@ -13,70 +14,82 @@ X-KDE-Submenu[ru_RU]=Контрольные суммы
 Exec=/usr/local/bin/checksum_blister -f '%F' -a md5 -c show
 Icon=documentinfo
 Name=Show md5 Checksum
+Name[nl]=md5-controlesom tonen
 Name[ru_RU]=Показать md5 Checksum
 
 [Desktop Action createmd5]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a md5 -c create
 Icon=document-new
 Name=Create file with md5 Checksum
+Name[nl]=Bestand aanmaken met md5-controlesom
 Name[ru_RU]=Создать файл с md5 Checksum
 
 [Desktop Action checkmd5]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a md5 -c check
 Icon=dialog-ok
 Name=Check md5 Checksum
+Name[nl]=md5-controlesom controleren
 Name[ru_RU]=Проверить md5 Checksum
 
 [Desktop Action showsha1]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha1 -c show
 Icon=documentinfo
 Name=Show sha1 Checksum
+Name[nl]=sha1-controlesom tonen
 Name[ru_RU]=Показать sha1 Checksum
 
 [Desktop Action createsha1]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha1 -c create
 Icon=document-new
 Name=Create file with sha1 Checksum
+Name[nl]=Bestand aanmaken met sha1-controlesom
 Name[ru_RU]=Создать файл с sha1 Checksum
 
 [Desktop Action checksha1]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha1 -c check
 Icon=dialog-ok
 Name=Check sha1 Checksum
+Name[nl]=sha1-controlesom controleren
 Name[ru_RU]=Проверить sha1 Checksum
 
 [Desktop Action showsha256]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha256 -c show
 Icon=documentinfo
 Name=Show sha256 Checksum
+Name[nl]=sha256-controlesom tonen
 Name[ru_RU]=Показать sha256 Checksum
 
 [Desktop Action createsha256]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha256 -c create
 Icon=document-new
 Name=Create file with sha256 Checksum
+Name[nl]=Bestand aanmaken met sha256-controlesom
 Name[ru_RU]=Создать файл с sha256 Checksum
 
 [Desktop Action checksha256]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha256 -c check
 Icon=dialog-ok
 Name=Check sha256 Checksum
+Name[nl]=sha256-controlesom controleren
 Name[ru_RU]=Проверить sha256 Checksum
 
 [Desktop Action showsha512]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha512 -c show
 Icon=documentinfo
 Name=Show sha512 Checksum
+Name[nl]=sha512-controlesom tonen
 Name[ru_RU]=Показать sha512 Checksum
 
 [Desktop Action createsha512]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha512 -c create
 Icon=document-new
 Name=Create file with sha512 Checksum
+Name[nl]=Bestand aanmaken met sha512-controlesom
 Name[ru_RU]=Создать файл с sha512 Checksum
 
 [Desktop Action checksha512]
 Exec=/usr/local/bin/checksum_blister -f '%F' -a sha512 -c check
 Icon=dialog-ok
 Name=Check sha512 Checksum
+Name[nl]=sha512-controlesom controleren
 Name[ru_RU]=Проверить sha512 Checksum
